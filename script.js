@@ -1,15 +1,9 @@
-// script.js
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
+// Change navbar style on scroll
+window.addEventListener('scroll', function () {
+  const navbar = document.getElementById('navbar');
   if (window.scrollY > 50) {
-    navbar.style.backgroundColor = "#222"; // Darker when scrolled
+    navbar.classList.add('scrolled');
   } else {
-    navbar.style.backgroundColor = "#333";
+    navbar.classList.remove('scrolled');
   }
-});
-document.querySelectorAll(".nav-link").forEach(link => {
-  link.addEventListener("click", () => {
-    document.querySelectorAll(".nav-link").forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-  });
 });
